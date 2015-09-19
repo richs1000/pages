@@ -328,20 +328,16 @@ GraphModel.prototype.chooseQuestion = function() {
 	// add it to the question string
 
 	if(index === 0 ){
-	    	console.log(templateString)
 	    this.question = this.question + templateString + "<br/>";
 	}else if(index === 1 || index === 3){
-	    	console.log(templateString)
 	    this.question = this.question + templateString
 	}else if(index === 2){
-	    	console.log(templateString)
 	    this.question = this.question + '[' + templateString[0] ;
 	    for(var i = 1; i < templateString.length; i++){
 		this.question = this.question + ', ' + templateString[i];
 	    }
 	    this.question = this.question + ']' + "<br />";
-	}else{	console.log(templateString)
-		
+	}else{	
 	    var commandsString = templateString[templateString.length - 1] + " xs" ;
 	    for(var i = templateString.length - 2 ; i >= 0; i--){
 		commandsString = templateString[i] + '(' + commandsString  + ')';
