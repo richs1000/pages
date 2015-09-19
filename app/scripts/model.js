@@ -301,7 +301,7 @@ GraphModel.prototype.createNewQuestions = function() {
     list = this.createList(listSize);
     listCommands = this.createCommands(listSize);
 
-    this.questions = [["Given:" + " xs = ", list, listCommands]];
+    this.questions = [["Given:", " xs = ", list, "what is the value of ", listCommands]];
     // the question index is used to rotate through the questions
     this.questionIndex = 0;
     // the answer(s) is/are stored in an array
@@ -326,17 +326,32 @@ GraphModel.prototype.chooseQuestion = function() {
 	// get the next line of the template
 	var templateString = questionTemplate[index];
 	// add it to the question string
-	if(typeof templateString === 'string'){
+
+	if(index === 0 ){
+	    	console.log(templateString)
 	    this.question = this.question + templateString + "<br/>";
-	}else{
+	}else if(index === 1 || index === 3){
+	    	console.log(templateString)
+	    this.question = this.question + templateString
+	}else if(index === 2){
+	    	console.log(templateString)
 	    this.question = this.question + '[' + templateString[0] ;
 	    for(var i = 1; i < templateString.length; i++){
 		this.question = this.question + ', ' + templateString[i];
 	    }
-	    this.question = this.question + ']';
+	    this.question = this.question + ']' + "<br />";
+	}else{	console.log(templateString)
+		
+	    var commandsString = templateString[templateString.length - 1] + " xs" ;
+	    for(var i = templateString.length - 2 ; i >= 0; i--){
+		commandsString = templateString[i] + '(' + commandsString  + ')';
+	    }
+	    this.question = this.question + commandsString
+	    
 	}
 	
     }
+    console.log(this.question)
 }
 
 
