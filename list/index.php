@@ -7,14 +7,14 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="app/styles/style.css"/>
 		<link rel="stylesheet" type="text/css" href="app/styles/bootstrap.min.css">
-		<title>What is the final list?</title>
+		<title>Which Node Gets Expanded Next?</title>
 
 	</head>
 	<body>
 		<div class="starter-template">
 			<div class="container">
 				<div class="row">
-					<h3>List questions</h3>
+					<h3>Contents of Fringe</h3>
 					<div id='fringeTableDiv'>
 					</div>
 				</div>
@@ -50,6 +50,7 @@
 		<script src="app/scripts/fringemodel.js"></script>
 		<script src="app/scripts/questionbankmodel.js"></script>
 		<script src="app/scripts/model.js"></script>
+		<script src="app/scripts/fringeview.js"></script>
 		<script src="app/scripts/questionbankview.js"></script>
 		<script src="app/scripts/view.js"></script>
 		<script src="app/scripts/controller.js"></script>

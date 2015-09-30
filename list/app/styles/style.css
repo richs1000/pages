@@ -5,14 +5,6 @@ body{
 }
 
 
-#form1 {
-}
-
-
-#graphCanvas {
-    border: 10px inset blue;
-}
-
 #lblQuestion {
 	font-size: 24px;
 }
@@ -47,4 +39,20 @@ body{
 
 .wrongAnswer{
     background:red;
+}
+
+th {
+	text-align: center;
+	font-weight: bold;
+	vertical-align: baseline;
+}
+
+
+td {
+	vertical-align: middle;
+}
+
+#fringeTable {
+	border-collapse: separate;
+	border-spacing: 10px;
 }
